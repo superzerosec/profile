@@ -28,7 +28,10 @@ While inside the Packages directory, download theme repository
 ```shell
 wget https://raw.githubusercontent.com/superzerosec/profile/master/sublime-profile/superzerosec.tmTheme -P superzerosec
 ```
+### Activating theme
+Go to Preferences -> Color Scheme -> User and select the Dracula Color Scheme.
 
 # Thanks to
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
 * [tmux](https://github.com/tmux/tmux)
+* [Sublime Text](https://www.sublimetext.com)
