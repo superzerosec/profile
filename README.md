@@ -17,6 +17,18 @@ A custom profile for terminal multiplexer
 wget https://raw.githubusercontent.com/superzerosec/profile/master/tmux-profile/tmux.conf -O ~/.tmux.conf
 ```
 
+# Sublime
+
+## Installation
+### via git
+Locate Sublime Text Packages directory by using the menu item Preferences -> Browse Packages....
+
+While inside the Packages directory, download theme repository
+
+```shell
+wget https://raw.githubusercontent.com/superzerosec/profile/master/sublime-profile/superzerosec.tmTheme -P superzerosec
+```
+
 # Thanks to
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
 * [tmux](https://github.com/tmux/tmux)
