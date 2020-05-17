@@ -76,7 +76,7 @@ setup_dependency() {
 
 	echo "${YELLOW}Installing dependency${RESET}"
 
-	apt update && apt install curl git tmux zsh vim -y
+	apt update && apt install curl wget git tmux zsh vim -y
 
 	echo
 	
@@ -234,6 +234,34 @@ setup_shell() {
 	echo
 }
 
+setup_theme () {
+
+	echo "${YELLOW}Setup custom theme...${RESET}"
+
+	wget https://raw.githubusercontent.com/superzerosec/profile/master/zsh-profile/theme/workstation.zsh-theme -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/workstation.zsh-theme
+	wget https://raw.githubusercontent.com/superzerosec/profile/master/zsh-profile/theme/server.zsh-theme -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/server.zsh-theme
+
+	sed -i "s/ZSH_THEME=.*/ZSH_THEME=\"server\"/" ~/.zshrc
+	
+	echo "${GREEN}Theme successfully changed${RESET}"
+	echo
+
+}
+
+setup_plugin () {
+
+	echo "${YELLOW}Setup plugin...${RESET}"
+
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+	sed -i "s/plugins=.*/plugins=(git docker tmux zsh-syntax-highlighting zsh-autosuggestions)/" ~/.zshrc
+
+	echo "${GREEN}Plugin successfully added${RESET}"
+	echo	
+
+}
+
 main() {
 	# Run as unattended if stdin is closed
 	if [ ! -t 0 ]; then
@@ -271,6 +299,11 @@ main() {
 	setup_ohmyzsh
 	setup_zshrc
 	setup_shell
+	setup_theme
+	setup_plugin
+
+	echo "${GREEN}oh-my-zsh Done!!${RESET}"
+
 }
 
 main "$@"
