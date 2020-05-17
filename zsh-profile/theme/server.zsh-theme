@@ -1,3 +1,4 @@
+# by: superzerosec
 # user, host, full path, and time/date on two lines for easier vgrepping
 
 function hg_prompt_info {
