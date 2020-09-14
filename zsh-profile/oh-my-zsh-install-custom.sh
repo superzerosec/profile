@@ -64,7 +64,7 @@ setup_dependency() {
 
 	echo "${YELLOW}Installing dependency${RESET}"
 
-	sudo apt update && apt install curl wget git tmux zsh vim -y
+	sudo apt update && sudo apt install curl wget git tmux zsh vim -y
 
 	echo
 	
