@@ -17,6 +17,14 @@ A custom profile for terminal multiplexer
 wget https://raw.githubusercontent.com/superzerosec/profile/master/tmux-profile/tmux.conf -O ~/.tmux.conf
 ```
 
+# spacevim
+
+## Installation
+### via curl
+```shell
+curl -sLf https://spacevim.org/install.sh | bash; mkdir ~/.SpaceVim.d; wget https://raw.githubusercontent.com/superzerosec/profile/master/spacevim-profile/init.toml -O ~/.SpaceVim.d/init.toml
+```
+
 # Sublime
 A shareware cross-platform source code editor with a Python application programming interface (API)
 ## Installation
