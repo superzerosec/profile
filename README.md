@@ -39,7 +39,12 @@ wget https://raw.githubusercontent.com/superzerosec/profile/master/sublime-profi
 ### Activating theme
 Go to Preferences -> Color Scheme -> User and select the Dracula Color Scheme.
 
-# Thanks to
+# Install script
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/superzerosec/profile/master/install.sh)"
+```
+
+# Thanks
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
 * [Tmux](https://github.com/tmux/tmux)
 * [Sublime Text](https://www.sublimetext.com)
