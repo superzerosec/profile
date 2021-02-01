@@ -1,6 +1,11 @@
 # Getting Started
 Custom profile that can increase your productivity and will make you look awesome!!
 
+# One Liner
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/superzerosec/profile/master/install.sh)"
+```
+
 # Oh My Zsh
 Installation include a custom themes and interestion plugin
 ## Installation
@@ -38,11 +43,6 @@ wget https://raw.githubusercontent.com/superzerosec/profile/master/sublime-profi
 ```
 ### Activating theme
 Go to Preferences -> Color Scheme -> User and select the Dracula Color Scheme.
-
-# Install script
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/superzerosec/profile/master/install.sh)"
-```
 
 # Thanks
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
