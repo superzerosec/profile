@@ -8,4 +8,4 @@ wget https://raw.githubusercontent.com/superzerosec/profile/master/tmux-profile/
 
 
 ## installing spacevim profile
-curl -sLf https://spacevim.org/install.sh | bash; mkdir ~/.SpaceVim.d; wget https://raw.githubusercontent.com/superzerosec/profile/master/spacevim-profile/init.toml -O ~/.SpaceVim.d/init.toml
+curl -sLf https://spacevim.org/install.sh | bash; mkdir ~/.SpaceVim.d; wget https://raw.githubusercontent.com/superzerosec/profile/master/spacevim-profile/init.toml -O ~/.SpaceVim.d/init.toml; mkdir -p ~/.vim/pack/tpope/start; cd ~/.vim/pack/tpope/start; git clone https://tpope.io/vim/commentary.git; vim -u NONE -c "helptags commentary/doc" -c q
