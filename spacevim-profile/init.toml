@@ -20,6 +20,7 @@
     # install nerd fonts
     statusline_separator = "nil"
     statusline_iseparator = "bar"
+    relativenumber = false
     buffer_index_type = 4
     windows_index_type = 3
     enable_tabline_filetype_icon = false
