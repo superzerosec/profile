@@ -228,9 +228,10 @@ setup_theme () {
 
 	wget https://raw.githubusercontent.com/superzerosec/profile/master/zsh-profile/theme/workstation.zsh-theme -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/workstation.zsh-theme
 	wget https://raw.githubusercontent.com/superzerosec/profile/master/zsh-profile/theme/server.zsh-theme -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/server.zsh-theme
-	wget https://raw.githubusercontent.com/superzerosec/profile/master/zsh-profile/theme/jovial.zsh-theme -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/jovial.zsh-theme
+	wget https://raw.githubusercontent.com/superzerosec/profile/master/zsh-profile/theme/workstation2.zsh-theme -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/workstation2.zsh-theme
+	wget https://raw.githubusercontent.com/superzerosec/profile/master/zsh-profile/theme/server2.zsh-theme -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/server2.zsh-theme
 
-	sed -i "s/ZSH_THEME=.*/ZSH_THEME=\"jovial\"/" ~/.zshrc
+	sed -i "s/ZSH_THEME=.*/ZSH_THEME=\"server2\"/" ~/.zshrc
 	
 	echo "${GREEN}Theme successfully changed${RESET}"
 	echo
