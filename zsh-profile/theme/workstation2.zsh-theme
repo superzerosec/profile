@@ -54,7 +54,7 @@ typeset -gA JOVIAL_SYMBOL=(
     corner.top    '╭─'
     corner.bottom '╰─'
 
-    git.dirty '✘✘✘'
+    git.dirty '✘'
     git.clean '✔'
 
     ## preset arrows
@@ -437,6 +437,12 @@ typeset -gA jovial_affix_lengths=()
 @jov.set-typing-pointer() {
     jovial_parts[typing]="${JOVIAL_PALETTE[typing]}"
 
+    if (( exit_code != 0 )); then
+        jovial_parts[exit-code]="${sgr_reset}${JOVIAL_PALETTE[error]}${exit_code}${JOVIAL_PALETTE[normal]}"
+    else
+        jovial_parts[exit-code]="${sgr_reset}${JOVIAL_PALETTE[success]}${exit_code}${JOVIAL_PALETTE[normal]}"
+    fi
+    
     if [[ -n ${jovial_rev_git_dir} ]]; then
         if [[ ${jovial_is_git_dirty} == false ]]; then
             jovial_parts[typing]+="${JOVIAL_SYMBOL[arrow.git-clean]}"
@@ -444,7 +450,8 @@ typeset -gA jovial_affix_lengths=()
             jovial_parts[typing]+="${JOVIAL_SYMBOL[arrow.git-dirty]}"
         fi
     else
-        jovial_parts[typing]+="${JOVIAL_SYMBOL[arrow]}"
+        #jovial_parts[typing]+="[${JOVIAL_PALETTE[success]}${exit_code}${JOVIAL_PALETTE[normal]}]${JOVIAL_SYMBOL[arrow]}"
+        jovial_parts[typing]+="[${jovial_parts[exit-code]}]${JOVIAL_SYMBOL[arrow]}"
     fi
 }
 
@@ -562,13 +569,8 @@ typeset -gA jovial_affix_lengths=()
         pin_length+=$(( ${jovial_affix_lengths[exec-elapsed]} + ${#elapsed} ))
     fi
 
-    if (( exit_code != 0 )); then
-        jovial_parts[exit-code]="${sgr_reset}${JOVIAL_AFFIXES[exit-code.prefix]}${JOVIAL_PALETTE[exit.code]}${exit_code}${JOVIAL_AFFIXES[exit-code.suffix]}"
-        pin_length+=$(( ${jovial_affix_lengths[exit-code]} + ${#exit_code} ))
-    fi
-    
     if (( pin_length > 0 )); then
-        local pin_message="${jovial_parts[exec-elapsed]}${jovial_parts[exit-code]}"
+        local pin_message="${jovial_parts[exec-elapsed]}"
         @jov.align-previous-right "${pin_message}" ${pin_length} pin_message
         print -P "${pin_message}"
     fi
