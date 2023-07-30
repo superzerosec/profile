@@ -270,7 +270,7 @@ main() {
 	done
 
 	setup_color
-	setup_dependency
+	#setup_dependency
 
 
 	if ! command_exists zsh; then
