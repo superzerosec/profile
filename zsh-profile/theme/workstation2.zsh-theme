@@ -155,7 +155,7 @@ typeset -gA JOVIAL_AFFIXES=(
     git-info.prefix        ' ${JOVIAL_PALETTE[conj.]}on ${JOVIAL_PALETTE[normal]}('
     git-info.suffix        '${JOVIAL_PALETTE[normal]})'
 
-    venv.prefix            ' ${JOVIAL_PALETTE[normal]}('
+    venv.prefix            '${JOVIAL_PALETTE[normal]}('
     venv.suffix            '${JOVIAL_PALETTE[normal]})'
 
     exec-elapsed.prefix    ' ${JOVIAL_PALETTE[elapsed]}~'
@@ -995,7 +995,7 @@ add-zsh-hook precmd @jov.prompt-prepare
     local corner_bottom="${sgr_reset}${JOVIAL_PALETTE[normal]}${JOVIAL_SYMBOL[corner.bottom]}"
 
     echo "${corner_top}${(j..)ordered_parts}${prompts[current-time]}"
-    echo "${corner_bottom}${prompts[typing]}${prompts[venv]} ${sgr_reset}"
+    echo "${corner_bottom}${prompts[venv]}${prompts[typing]} ${sgr_reset}"
 }
 
 
