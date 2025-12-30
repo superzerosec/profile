@@ -79,7 +79,7 @@ typeset -gA JOVIAL_SYMBOL=(
 #
 typeset -gA JOVIAL_PALETTE=(
     # hostname
-    host '%F{5}'
+    host '%F{123}'
 
     # common user name
     user '%F{253}'
