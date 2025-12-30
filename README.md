@@ -1,6 +1,12 @@
 # Getting Started
 Custom profile that can increase your productivity and will make you look awesome!!
 
+# Font
+Install and configure OS terminal to use Nerd font
+```shell
+brew install font-hack-nerd-font
+```
+
 # One Liner
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/superzerosec/profile/master/install.sh)"
@@ -51,4 +57,5 @@ Go to Preferences -> Color Scheme -> User and select the Dracula Color Scheme.
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
 * [Tmux](https://github.com/tmux/tmux)
 * [Sublime Text](https://www.sublimetext.com)
+
 
