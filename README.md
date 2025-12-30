@@ -20,6 +20,9 @@ A custom profile for terminal multiplexer
 ### via wget
 ```shell
 wget https://raw.githubusercontent.com/superzerosec/profile/master/tmux-profile/tmux.conf -O ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.tmux.conf
+~/.tmux/plugins/tpm/bin/install_plugins
 ```
 
 # spacevim
@@ -48,3 +51,4 @@ Go to Preferences -> Color Scheme -> User and select the Dracula Color Scheme.
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
 * [Tmux](https://github.com/tmux/tmux)
 * [Sublime Text](https://www.sublimetext.com)
+
