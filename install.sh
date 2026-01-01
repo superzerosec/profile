@@ -17,8 +17,8 @@ rm -fr ~/.SpaceVim*
 rm -fr ~/.vim
 sudo rm -rf /opt/nvim-linux-x86_64
 
-sudo apt update
-sudo apt install make gcc ripgrep unzip git xclip curl
+sudo apt update -y
+sudo apt install -y make gcc ripgrep unzip git xclip curl
 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo mkdir -p /opt/nvim-linux-x86_64
