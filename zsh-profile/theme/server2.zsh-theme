@@ -107,7 +107,7 @@ typeset -gA JOVIAL_PALETTE=(
     exit.code '%B%F{203}'
 
     # 'conj.': short for 'conjunction', like as, at, in, on, using
-    conj. '%F{102}'
+    conj. '%F{6}'
 
     # shell typing area pointer
     typing '%F{252}'
