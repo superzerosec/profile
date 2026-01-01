@@ -46,8 +46,8 @@ sudo rm -rf /opt/nvim-linux-x86_64
 ```
 Installing OS dependencies
 ```shell
-sudo apt update
-sudo apt install make gcc ripgrep unzip git xclip curl
+sudo apt update -y
+sudo apt install -y make gcc ripgrep unzip git xclip curl
 ```
 ### via curl
 ```shell
@@ -79,6 +79,7 @@ Go to Preferences -> Color Scheme -> User and select the Dracula Color Scheme.
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
 * [Tmux](https://github.com/tmux/tmux)
 * [Sublime Text](https://www.sublimetext.com)
+
 
 
 
