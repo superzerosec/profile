@@ -31,12 +31,29 @@ tmux source ~/.tmux.conf
 ~/.tmux/plugins/tpm/bin/install_plugins
 ```
 
-# spacevim
+# Neovim
 
 ## Installation
+Remove existing config
+```shell
+rm -fr ~/.config/nvim ~/.SpaceVim* ~/.vim
+```
+Installing OS dependencies
+```shell
+sudo apt update
+sudo apt install make gcc ripgrep unzip git xclip curl
+```
 ### via curl
 ```shell
-curl -sLf https://spacevim.org/install.sh | bash; mkdir ~/.SpaceVim.d; wget https://raw.githubusercontent.com/superzerosec/profile/master/spacevim-profile/init.toml -O ~/.SpaceVim.d/init.toml; mkdir -p ~/.vim/pack/tpope/start; cd ~/.vim/pack/tpope/start; git clone https://tpope.io/vim/commentary.git; vim -u NONE -c "helptags commentary/doc" -c q
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo mkdir -p /opt/nvim-linux-x86_64
+sudo chmod a+rX /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/
+sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/vim
+
+git clone https://github.com/superzerosec/nvchad-neovim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 # Sublime
@@ -57,5 +74,6 @@ Go to Preferences -> Color Scheme -> User and select the Dracula Color Scheme.
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
 * [Tmux](https://github.com/tmux/tmux)
 * [Sublime Text](https://www.sublimetext.com)
+
 
 
