@@ -56,7 +56,7 @@ sudo mkdir -p /opt/nvim-linux-x86_64
 sudo chmod a+rX /opt/nvim-linux-x86_64
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/
-sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/vim
+echo "alias vim='nvim'" >> ~/.zshrc
 
 git clone https://github.com/superzerosec/nvchad-neovim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
@@ -92,6 +92,7 @@ Go to Preferences -> Color Scheme -> User and select the Dracula Color Scheme.
 * [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh). Follow on Twitter [@ohmyzsh](https://twitter.com/ohmyzsh).
 * [Tmux](https://github.com/tmux/tmux)
 * [Sublime Text](https://www.sublimetext.com)
+
 
 
 
